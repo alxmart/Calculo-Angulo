@@ -13,9 +13,95 @@ import android.app.AlertDialog;
 
 public class MainActivity extends AppCompatActivity {
 
+    private EditText anguloEditText;
+    private Button calcularButton;
+    private RadioButton senoRadioButton,cossenoRadioButtton,tangenteRadioButton;
+    private int intOpcao;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    public double CalcularSeno(double dblAngulo) {
+        return Math.sin(Math.toRadians(dblAngulo));
+    }
+
+    public double CalcularCosseno(double dblAngulo) {
+        return Math.sin(Math.toRadians(dblAngulo));
+    }
+
+    public double CalcularTangente(double dblAngulo) {
+        return Math.sin(Math.toRadians(dblAngulo));
+    }
+
+    public void Calcular() {
+        AlertDialog dlgAlerta;
+        double dblAngulo, dblValorCalculo;
+        String strAngulo, strTitulo;
+
+        strAngulo =anguloEditText.getText().toString();
+
+        if(strAngulo.equals(""))
+            dblAngulo = 0;
+        else
+            dblAngulo = Double.parseDouble(strAngulo);
+
+        if(dblAngulo > 0)     {
+
+            if (intOpcao == 1) {
+                dblValorCalculo = CalcularSeno(dblAngulo);
+                strTitulo = "Cálculo de Seno";
+            } else if (intOpcao == 2) {
+                dblValorCalculo = CalcularCosseno(dblAngulo);
+                strTitulo = "Cálculo de Cosseno";
+            } else {
+                dblValorCalculo = CalcularTangente(dblAngulo);
+                strTitulo = "Cálculo de Tangente";
+            }
+
+            dlgAlerta = new AlertDialog.Builder(this).create();
+            dlgAlerta.setTitle(strTitulo);
+            dlgAlerta.setMessage(String.valueOf(dblValorCalculo));
+            dlgAlerta.show();
+    }
+
+        else {
+            dlgAlerta = new AlertDialog.Builder(this).create();
+            dlgAlerta.setTitle("Aviso");
+            dlgAlerta.setMessage("Somente são aceitos valores positivos !");
+            dlgAlerta.show();
+        }
+}
+
+//@Override
+public void onClick(View objeto) {
+
+        switch(objeto.getId()) {
+
+            case R.id.rbSeno:
+                intOpcao = 1;
+                cossenoRadioButtton.setChecked(false);
+                tangenteRadioButton.setChecked(false);
+                break;
+
+            case R.id.rbCosseno:
+                intOpcao = 2;
+                senoRadioButton.setChecked(false);
+                tangenteRadioButton.setChecked(false);
+                break;
+
+            case R.id.rbTangente:
+                intOpcao = 3;
+                senoRadioButton.setChecked(false);
+                cossenoRadioButtton.setChecked(false);
+                break;
+
+            case R.id.btn_Calcular:
+                Calcular();
+                break;
+        }
+}
+
 }
