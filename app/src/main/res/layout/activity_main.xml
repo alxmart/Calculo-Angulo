@@ -39,8 +39,8 @@
 
     <RadioButton
         android:id="@+id/rbSeno"
-        android:layout_width="79dp"
-        android:layout_height="34dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="84dp"
         android:text="@string/OpcaoSeno"
@@ -50,12 +50,12 @@
 
     <RadioButton
         android:id="@+id/rbCosseno"
-        android:layout_width="84dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="72dp"
         android:text="@string/OpcaoCosseno"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toEndOf="@+id/rbSeno"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
 
@@ -63,12 +63,12 @@
         android:id="@+id/rbTangente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="16dp"
         android:text="@string/OpcaoTangente"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toEndOf="@+id/rbCosseno"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
 
