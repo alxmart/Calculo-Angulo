@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Calculadora de ângulos</string>
     <string name="ValorAngulo">Valor do ângulo</string>
+    <string name="OpcaoSeno">Seno</string>
+    <string name="OpcaoCosseno">Cosseno</string>
+    <string name="OpcaoTangente">Tangente</string>
 </resources>

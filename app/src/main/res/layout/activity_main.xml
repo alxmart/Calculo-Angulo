@@ -43,7 +43,8 @@
         android:layout_height="34dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="84dp"
-        android:text="RadioButton"
+        android:text="@string/OpcaoSeno"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -53,7 +54,8 @@
         android:layout_height="43dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="60dp"
-        android:text="RadioButton"
+        android:text="@string/OpcaoCosseno"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toEndOf="@+id/rbSeno"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
 
@@ -63,9 +65,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="16dp"
-        android:text="RadioButton"
+        android:text="@string/OpcaoTangente"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toEndOf="@+id/rbCosseno"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
