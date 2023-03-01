@@ -14,12 +14,8 @@ import android.app.AlertDialog;
 public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     private EditText anguloEditText;
-
     private Button calcularButton;
-
-    private RadioButton senoRadioButton,cossenoRadioButtton,
-                        tangenteRadioButton;
-
+    private RadioButton senoRadioButton, cossenoRadioButtton, tangenteRadioButton;
     private int intOpcao;
 
     @Override
@@ -43,26 +39,21 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     }
 
     public double CalcularSeno(double dblAngulo) {
-
         return Math.sin(Math.toRadians(dblAngulo));
     }
 
     public double CalcularCosseno(double dblAngulo) {
-
-        return Math.sin(Math.toRadians(dblAngulo));
+        return Math.cos(Math.toRadians(dblAngulo));
     }
 
     public double CalcularTangente(double dblAngulo) {
-
-        return Math.sin(Math.toRadians(dblAngulo));
+        return Math.tan(Math.toRadians(dblAngulo));
     }
 
     public void Calcular() {
 
         AlertDialog dlgAlerta;
-
         double dblAngulo, dblValorCalculo;
-
         String strAngulo, strTitulo;
 
         strAngulo = anguloEditText.getText().toString();
@@ -73,7 +64,6 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
             dblAngulo = Double.parseDouble(strAngulo);
 
         if(dblAngulo > 0)     {
-
             if (intOpcao == 1) {
                 dblValorCalculo = CalcularSeno(dblAngulo);
                 strTitulo = "Cálculo de Seno";
