@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.063" />
 
     <EditText
-        android:id="@+id/anguloEditText"
+        android:id="@+id/edtValorAngulo"
         android:layout_width="150dp"
         android:layout_height="36dp"
         android:layout_alignParentEnd="true"
@@ -57,7 +57,7 @@
         android:text="@string/OpcaoCosseno"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toEndOf="@+id/rbSeno"
-        app:layout_constraintTop_toBottomOf="@+id/anguloEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/edtValorAngulo" />
 
     <RadioButton
         android:id="@+id/rbTangente"
@@ -70,7 +70,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toEndOf="@+id/rbCosseno"
-        app:layout_constraintTop_toBottomOf="@+id/anguloEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/edtValorAngulo" />
 
     <Button
         android:id="@+id/btn_Calcular"

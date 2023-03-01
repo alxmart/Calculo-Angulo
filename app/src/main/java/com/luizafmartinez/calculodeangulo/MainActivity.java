@@ -11,37 +11,61 @@ import android.widget.RadioButton;
 import android.app.AlertDialog;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     private EditText anguloEditText;
+
     private Button calcularButton;
-    private RadioButton senoRadioButton,cossenoRadioButtton,tangenteRadioButton;
+
+    private RadioButton senoRadioButton,cossenoRadioButtton,
+                        tangenteRadioButton;
+
     private int intOpcao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        anguloEditText = (EditText) findViewById(R.id.edtValorAngulo);
+        calcularButton = (Button) findViewById(R.id.btn_Calcular);
+        senoRadioButton = (RadioButton) findViewById(R.id.rbSeno);
+        cossenoRadioButtton = (RadioButton) findViewById(R.id.rbCosseno);
+        tangenteRadioButton = (RadioButton) findViewById(R.id.rbTangente);
+
+        calcularButton.setOnClickListener(this);
+        senoRadioButton.setOnClickListener(this);
+        cossenoRadioButtton.setOnClickListener(this);
+        tangenteRadioButton.setOnClickListener(this);
+
+        int opcao = 1;
+
     }
 
     public double CalcularSeno(double dblAngulo) {
+
         return Math.sin(Math.toRadians(dblAngulo));
     }
 
     public double CalcularCosseno(double dblAngulo) {
+
         return Math.sin(Math.toRadians(dblAngulo));
     }
 
     public double CalcularTangente(double dblAngulo) {
+
         return Math.sin(Math.toRadians(dblAngulo));
     }
 
     public void Calcular() {
+
         AlertDialog dlgAlerta;
+
         double dblAngulo, dblValorCalculo;
+
         String strAngulo, strTitulo;
 
-        strAngulo =anguloEditText.getText().toString();
+        strAngulo = anguloEditText.getText().toString();
 
         if(strAngulo.equals(""))
             dblAngulo = 0;
@@ -75,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         }
 }
 
-//@Override
+@Override
 public void onClick(View objeto) {
 
         switch(objeto.getId()) {
@@ -104,4 +128,8 @@ public void onClick(View objeto) {
         }
 }
 
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        super.onPointerCaptureChanged(hasCapture);
+    }
 }
